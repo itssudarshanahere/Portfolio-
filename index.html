@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudarshana V.R | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            overflow-x: hidden;
+        }
+        /* NAVBAR */
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 60px;
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08);
+            z-index: 1000;
+        }
+        
+        nav h2 {
+            color: #9f8cff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: .3s;
+        }
+        
+        nav ul li a:hover {
+            color: #9f8cff;
+        }
+        /* SECTIONS */
+        
+        section {
+            min-height: 100vh;
+            padding: 120px 12%;
+        }
+        /* HERO */
+        
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        #home h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+        
+        #home span {
+            color: #9f8cff;
+        }
+        
+        #home p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            opacity: .85;
+        }
+        
+        .btn {
+            width: max-content;
+            padding: 14px 32px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #9f8cff, #6c63ff);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 0 25px rgba(159, 140, 255, .6);
+            transition: .4s;
+        }
+        
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 45px rgba(159, 140, 255, 1);
+        }
+        /* GLASS CARD */
+        
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+        }
+        /* SKILLS */
+        
+        .skills,
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill,
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            transition: .4s;
+        }
+        
+        .skill:hover,
+        .project:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 0 30px rgba(159, 140, 255, .6);
+        }
+        
+        .project h3 {
+            color: #9f8cff;
+        }
+        /* FOOTER */
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: .7;
+        }
+        /* MOBILE */
+        
+        @media(max-width:768px) {
+            nav {
+                padding: 15px 25px;
+            }
+            #home h1 {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav data-aos="fade-down">
+        <h2>Sudarshana</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="hero-title">Hi, I'm <span>Sudarshana V.R</span></h1>
+        <p class="hero-sub">AI & Data Science Student | Future AI Engineer</p>
+        <a href="#projects" class="btn hero-btn">View My Work</a>
+    </section>
+
+    <section id="about">
+        <div class="card" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>
+                I build intelligent, scalable and visually stunning applications. Actively seeking paid internships and real-world AI projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 data-aos="fade-right">Skills</h2>
+        <div class="skills">
+            <div class="skill" data-aos="zoom-in">Python</div>
+            <div class="skill" data-aos="zoom-in">Machine Learning</div>
+            <div class="skill" data-aos="zoom-in">HTML • CSS • JS</div>
+            <div class="skill" data-aos="zoom-in">Data Analysis</div>
+            <div class="skill" data-aos="zoom-in">SQL</div>
+            <div class="skill" data-aos="zoom-in">UI/UX</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 data-aos="fade-left">Projects</h2>
+        <div class="projects">
+            <div class="project" data-aos="flip-left">
+                <h3>AI Chatbot</h3>
+                <p>NLP powered intelligent chatbot</p>
+            </div>
+            <div class="project" data-aos="flip-left">
+                <h3>Student Analytics</h3>
+                <p>Insights using Pandas & ML</p>
+            </div>
+            <div class="project" data-aos="flip-left">
+                <h3>Animated Portfolio</h3>
+                <p>GSAP + AOS powered website</p>
+            </div>
+        </div>
+    </section>
+
+    <footer data-aos="fade-up">
+        © 2025 Sudarshana V.R
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+
+        // GSAP HERO ANIMATION
+        gsap.from(".hero-title", {
+            y: 80,
+            opacity: 0,
+            duration: 1
+        });
+        gsap.from(".hero-sub", {
+            y: 60,
+            opacity: 0,
+            duration: 1,
+            delay: .3
+        });
+        gsap.from(".hero-btn", {
+            scale: .5,
+            opacity: 0,
+            duration: .8,
+            delay: .6
+        });
+    </script>
+
+</body>
+
+</html>
